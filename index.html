@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PédagoBoost</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        /* Ajoutez du CSS personnalisé pour définir les dimensions et styles de votre div */
+        .fixed-bottom-right a{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            padding: 10px;
+            background-color: none;
+        }
+    </style>
   </head>
   <body>
     
@@ -15,15 +25,15 @@
       </a>
 
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Accueil</a></li>
+        <li class="nav-item"><a href="#home" class="nav-link active" aria-current="page">Accueil</a></li>
         <li class="nav-item"><a href="#features" class="nav-link">Caractéristiques</a></li>
         <li class="nav-item"><a href="#pricing" class="nav-link">Prix</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">A propos de nous</a></li>
+        <li class="nav-item"><a href="#FAQs" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">A propos de nous</a></li>
       </ul>
     </header>
 
-    <div class="p-5 text-center bg-body-tertiary rounded-3">
+    <div class="p-5 text-center bg-body-tertiary rounded-3" id="home">
         <img src="media/logo-little.png" alt="Logo">
         <h1 class="text-body-emphasis">PédagoBoost</h1>
         <h4>
@@ -38,7 +48,7 @@
             <a class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill text-center" href="#pricing">
                 Découvrir les tarifs
             </a>
-            <a class="btn btn-outline-secondary btn-lg px-4 rounded-pill" href="#">
+            <a class="btn btn-outline-secondary btn-lg px-4 rounded-pill" href="#about">
                 Qui sommes-nous ?
             </a>
         </div>
@@ -59,7 +69,6 @@
                     diverses matières, garantissant ainsi que chaque étudiant puisse atteindre 
                     son plein potentiel académique avec confiance.
                 </p>
-                <a href="#" class="btn btn-primary btn-lg">Primary button</a>
             </div>
 
             <div class="col">
@@ -139,7 +148,7 @@
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm">
                         <div class="card-header py-3">
-                            <h4 class="my-0 fw-normal">Pack 1 heure</h4>
+                            <h4 class="my-0 fw-normal">Pack express</h4>
                         </div>
                         <div class="card-body">
                             <h1 class="card-title pricing-card-title">25€<!--<small class="text-body-secondary fw-light">/h</small>--></h1>
@@ -158,12 +167,12 @@
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm">
                         <div class="card-header py-3">
-                            <h4 class="my-0 fw-normal">Pack 5 heures + 30 minutes</h4>
+                            <h4 class="my-0 fw-normal">Pack préparation examen</h4>
                         </div>
                         <div class="card-body">
                             <h1 class="card-title pricing-card-title">100€</h1>
                             <ul class="list-unstyled mt-3 mb-4">
-                                <li>20€/h + 30 min offertes</li>
+                                <li>5 heures + 30 min offertes</li>
                                 <li>Annulation possible 24h avant le cours</li>
                                 <li>Présentiel ou distanciel</li>
                                 <li>Disponibilité 6j/7</li>
@@ -177,12 +186,12 @@
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm border-primary">
                         <div class="card-header py-3 text-bg-primary border-primary">
-                            <h4 class="my-0 fw-normal">Pack 10 heures + 1 heure</h4>
+                            <h4 class="my-0 fw-normal">Pack préparation examen +</h4>
                         </div>
                         <div class="card-body">
                             <h1 class="card-title pricing-card-title">150€</h1>
                             <ul class="list-unstyled mt-3 mb-4">
-                                <li>15€/h + 1h offerte</li>
+                                <li>10 heures + 1h offerte</li>
                                 <li>Annulation possible 12h avant le cours</li>
                                 <li>Présentiel ou distanciel</li>
                                 <li>Disponibilité 7j/7</li>
@@ -272,17 +281,120 @@
         </button>
     </div>
 
+    <!--FAQs-->
+    <div class="container mt-5" id="FAQs">
+        <h1 class="display-4 fw-normal text-body-emphasis text-center mb-5">Questions fréquemment posées</h1>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <strong>Quels sont les niveaux académiques couverts par vos services ?</strong> 
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Nous proposons des aides dans les matières scientifiques 
+                        (mathématiques, physique, chimie, informatique, SVT, mécanique) de la 6ème à la Terminale, 
+                        ainsi que dans certaines filières des études supérieurs.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <strong>Comment se passe le paiement ?</strong>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        50% du prix total sera a effectué par virement bancaire 
+                        (le RIB vous sera fourni une fois que les heures seront programmées)
+                        Le reste du paiement (espèces ou virement) sera à effectuer avant 
+                        ou après l'heure de cours directement à l'enseignant.  
+                        Après chaque paiement, vous recevrez un justificatif de paiement.      
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <strong>Quel est le processus de diagnostic de succès ?</strong>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Notre processus de diagnostic de succès comprend des évaluations initiales pour identifier 
+                        les lacunes et les points forts de l'élève, ce qui nous aide à créer un plan d'apprentissage sur mesure.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                        <strong>Comment modifier ou annuler un cours déjà programmer ?</strong>
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Pour la modification ou l'annulation d'une heure de cours, il suffit de nous prévenir par mail ou téléphone.
+                        Si vous décidez d'annuler le cours après le temps imparti 
+                        (ce temps dépend du pack choisi) aucun remboursement ne sera effectué de notre part.
+                        Sinon, vous serez entierrement remboursé.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Qui sommes nous ?-->
+    <div class="px-4 pt-5 my-5 text-center border-bottom bg-light" id="about">
+        <h1 class="display-4 fw-bold text-body-emphasis">Saad Rafiqul</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4" style="text-align: justify">
+                Après avoir décroché mon diplôme de baccalauréat, 
+                j'ai embrassé un passionnant parcours académique. 
+                J'ai entamé un voyage captivant en classe préparatoire 
+                aux écoles d'ingénieurs (PeiP) à Polytech Sorbonne. 
+                Pendant ces deux années, j'ai plongé dans un monde de 
+                découvertes scientifiques, renforçant mes compétences 
+                en mathématiques, en informatique, en physique, en 
+                mécanique et en chimie. <br>
+                À la fin de cette étape enrichissante, j'ai choisi 
+                de me spécialiser dans la filière informatique et 
+                ingénierie mathématique de l'école d'ingénieur Polytech 
+                Paris-Saclay. Mon aventure continue, me propulsant 
+                vers un avenir où je pourrai mettre en pratique 
+                ces compétences solides pour relever de nouveaux 
+                défis et contribuer à des projets innovants.
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <a href="https://www.linkedin.com/in/saad-rafiqul/" target="_blank" class="btn btn-primary btn-lg px-4 me-sm-3">Mon LinkedIn</a>
+                <a href="media/CV.pdf" target="_blank" class="btn btn-outline-secondary btn-lg px-4" download="CV-Saad.pdf">Mon CV</a>
+            </div>
+        </div>
+      </div>
+      
+      <div class="fixed-bottom-right">
+        <a href="#home" data-bs-toggle="tooltip" data-bs-title="Revenir tout en haut">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+                <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
+            </svg>
+        </a>
+      </div>
+
+
     <footer class=" my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Accueil</a></li>
+        <li class="nav-item"><a href="#home" class="nav-link px-2 text-body-secondary">Accueil</a></li>
         <li class="nav-item"><a href="#features" class="nav-link px-2 text-body-secondary">Caractéristiques</a></li>
         <li class="nav-item"><a href="#pricing" class="nav-link px-2 text-body-secondary">Prix</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">A propos de nous</a></li>
+        <li class="nav-item"><a href="#FAQs" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link px-2 text-body-secondary">A propos de nous</a></li>
         </ul>
-        <p class="text-center text-body-secondary">© 2023 PédagoBoost</p>
+        <p class="text-center text-body-secondary">© 2023 PédagoBoost - Mention légales</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  </body>
+    <script>alert("Les prestations ne sont pas encore accessible.");</script>
+    </body>
 </html>
